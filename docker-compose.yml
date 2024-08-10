@@ -1,0 +1,13 @@
+version: '1.0'
+services:
+  auth-service:
+    image: skeet15/auth-vivelibre
+    ports:
+      - "8080:8080"
+
+  token-retriever:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
